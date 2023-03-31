@@ -2,6 +2,7 @@ import 'package:bookly_app/core/utils/app_enums.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/utils/app_colors.dart';
 import '../bloc/home_bloc.dart';
 class BuildOptionIcons extends StatefulWidget {
   final IconData icon;
@@ -30,8 +31,8 @@ class _BuildOptionIconsState extends State<BuildOptionIcons> {
           widget.icon,
           size: 22,
           color: BlocProvider.of<HomeBloc>(context).selectedBooksView == widget.booksView
-              ?  const Color(0xffe1739e)
-              :  const Color(0xFF767676),
+              ?   AppColors.orangeColor
+              :  AppColors.greyColor,
         ),
       ),
     );

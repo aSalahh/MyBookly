@@ -1,5 +1,7 @@
+import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 
 class SlidingText extends StatelessWidget {
@@ -17,9 +19,10 @@ class SlidingText extends StatelessWidget {
       builder: (context, child) {
         return SlideTransition(
           position: _slidingAnimation,
-          child: const Text(
+          child:  Text(
             AppStrings.splashMessage,
             textAlign: TextAlign.center,
+            style: Styles.textStyle16.copyWith(color: AppColors.orangeColor),
           ),
         );
       },

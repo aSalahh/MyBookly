@@ -52,7 +52,9 @@ class DetailedBookItem extends StatelessWidget {
                   if (book.volumeInfo.authors != null)
                     Text(
                       book.volumeInfo.authors!.join(', '),
-                      style: Styles.textStyle14,
+                      style: Styles.textStyle14.copyWith(
+                        color: Colors.white70,
+                      ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -63,9 +65,9 @@ class DetailedBookItem extends StatelessWidget {
                       if (book.saleInfo != null)
                         Text(
                           _getPrice(book.saleInfo!),
-                          style: Styles.textStyle20.copyWith(
-                            fontWeight: FontWeight.w700,
-                          ),
+                          style: Styles.textStyle18.copyWith(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white70),
                         ),
                       BookRating(
                         rating: book.volumeInfo.averageRating ?? 0,

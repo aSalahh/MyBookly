@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/constants.dart';
 import 'draw_line_widget.dart';
 import 'newest_section.dart';
-import 'featured_items_list_view.dart';
+import 'featured_carousel_slider.dart';
 import 'home_view_custom_app_bar.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -22,8 +22,8 @@ class HomeViewBody extends StatelessWidget {
               ),
               child: HomeViewCustomAppBar(),
             ),
-            FeaturedItemsListView(),
-            SizedBox(height: 30),
+            FeaturedCarouselSlider(),
+            SizedBox(height: 20),
             DrawLine(),
             SizedBox(
               height: 10,
