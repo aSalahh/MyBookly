@@ -12,7 +12,7 @@ class HomeRemoteDatasourceImpl implements HomeRemoteDatasource {
   Future<List<BookModel>> fetchFeaturedBooks() async {
     try {
       final data = await apiService.get(
-        endpoint: 'volumes?q=Programming',
+        endpoint: 'volumes?q=computer science',
       );
       List<BookModel> books = [];
       books = List<BookModel>.from(

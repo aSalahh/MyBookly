@@ -86,8 +86,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   ) async {
     _sharedPrefManager
         .updateUserPreferredProductsView(selectedBooksView!.index);
-    // emit(_getProductsView());
-    emit(NewestBooksLoadingSuccess(books));
+    emit(_getProductsView());
   }
 
   Future<void> _loadNewestBooks(
@@ -104,6 +103,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         selectedBooksView = BooksView.values.firstWhere(
             (element) => element.index == index,
             orElse: () => BooksView.Grid);
+        emit(NewestBooksLoadingSuccess(books));
         emit(_getProductsView());
       },
     );
