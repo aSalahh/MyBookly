@@ -14,11 +14,11 @@ class SharedPrefManager {
   }
 
   int? getUserPreferredProductsView() {
-    return _prefs.getInt(PreferredProductsViewKey);
+    return _prefs.getInt(kPreferredProductsViewKey);
   }
 
   void updateUserPreferredProductsView(int index) async {
-    _prefs.setInt(PreferredProductsViewKey, index);
+    _prefs.setInt(kPreferredProductsViewKey, index);
   }
 
 
