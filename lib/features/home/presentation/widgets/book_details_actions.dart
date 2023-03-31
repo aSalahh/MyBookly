@@ -28,7 +28,7 @@ class BookDetailsActions extends StatelessWidget {
               backgroundColor: AppColors.whiteColor,
               text: _getPrice(book.saleInfo!),
               textColor: AppColors.blackColor,
-              fontSize: 20,
+              fontSize: 16,
             ),
           ),
           Expanded(
