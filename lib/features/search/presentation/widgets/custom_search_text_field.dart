@@ -11,23 +11,28 @@ class CustomSearchTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      onChanged: (value) {
-        context.read<SearchBloc>().add(ChangeSearchText(value));
-      },
-      onSubmitted: (value) {
-        context.read<SearchBloc>().add(LoadSearchResult());
-      },
-      decoration: InputDecoration(
-        hintText: AppStrings.searchAboutBookMessage,
-        enabledBorder: _buildTextFieldBorder(),
-        focusedBorder: _buildTextFieldBorder(),
-        suffixIcon: IconButton(
-          onPressed: () {
-            context.read<SearchBloc>().add(LoadSearchResult());
-          },
-          color: AppColors.whiteColor,
-          icon: const Icon(FontAwesomeIcons.magnifyingGlass),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextField(
+        onChanged: (value) {
+          context.read<SearchBloc>().add(ChangeSearchText(value));
+        },
+        onSubmitted: (value) {
+          context.read<SearchBloc>().add(LoadSearchResult());
+        },
+        decoration: InputDecoration(
+          hintText: AppStrings.searchAboutBookMessage,
+          enabledBorder: _buildTextFieldBorder(),
+          focusedBorder: _buildTextFieldBorder(),
+          suffixIcon: IconButton(
+            onPressed: () {
+              context.read<SearchBloc>().add(LoadSearchResult());
+            },
+            color: AppColors.whiteColor,
+            icon: const Icon(FontAwesomeIcons.magnifyingGlass),
+          ),
+          prefixIcon:             CloseButton(),
+
         ),
       ),
     );
