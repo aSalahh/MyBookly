@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/utils/constants.dart';
 import 'draw_line_widget.dart';
-import 'newest_section.dart';
+import 'newest_items/main_newest_section.dart';
 import 'featured_carousel_slider.dart';
 import 'home_view_custom_app_bar.dart';
 

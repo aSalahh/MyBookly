@@ -25,25 +25,25 @@ class FeaturedBooksLoadingFailed extends HomeState {
 
 abstract class  NewestBooksViewState extends HomeState {
   final List<BookModel> items;
-  NewestBooksViewState(this.items);
+  const NewestBooksViewState(this.items);
 }
 
 class NewestBooksList extends NewestBooksViewState {
-  NewestBooksList(List<BookModel> items) : super(items);
+  const NewestBooksList(List<BookModel> items) : super(items);
 
   @override
   List<Object> get props => [items];
 }
 
 class NewestBooksGrid extends NewestBooksViewState {
-  NewestBooksGrid(List<BookModel> items) : super(items);
+  const NewestBooksGrid(List<BookModel> items) : super(items);
 
   @override
   List<Object> get props => [items];
 }
 
 class NewestBooksScale extends NewestBooksViewState {
-  NewestBooksScale(List<BookModel> items) : super(items);
+  const NewestBooksScale(List<BookModel> items) : super(items);
 
   @override
   List<Object> get props => [items];
