@@ -23,9 +23,11 @@ class CustomBookImage extends StatelessWidget {
           );
         },
         errorWidget: (context, url, error) {
-          return const Icon(
-            FontAwesomeIcons.circleExclamation,
-            size: 50,
+          return const Center(
+            child: Icon(
+              FontAwesomeIcons.circleExclamation,
+              size: 50,
+            ),
           );
         },
       ),

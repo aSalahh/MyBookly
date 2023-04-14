@@ -9,6 +9,7 @@ import '../../../../core/utils/styles.dart';
 import '../../features/home/data/models/book_model/sale_info.dart';
 import '../../features/home/presentation/widgets/book_rating.dart';
 import '../../features/home/presentation/widgets/custom_book_image.dart';
+import '../utils/helpers.dart';
 
 class DetailedBookItem extends StatelessWidget {
   const DetailedBookItem({super.key, required this.book});
@@ -64,7 +65,7 @@ class DetailedBookItem extends StatelessWidget {
                     children: [
                       if (book.saleInfo != null)
                         Text(
-                          _getPrice(book.saleInfo!),
+                          getPrice(book.saleInfo!),
                           style: Styles.textStyle18.copyWith(
                               fontWeight: FontWeight.w500,
                               color: Colors.white70),
@@ -84,15 +85,5 @@ class DetailedBookItem extends StatelessWidget {
     );
   }
 
-  String _getPrice(SaleInfo saleInfo) {
-    if (saleInfo.saleability == 'FOR_SALE') {
-      return '${saleInfo.listPrice!.amount} £';
-    } else if (saleInfo.saleability == 'FREE') {
-      return saleInfo.saleability!;
-    } else if (saleInfo.saleability == 'NOT_FOR_SALE') {
-      return 'Not for sale';
-    } else {
-      return saleInfo.saleability.toString();
-    }
-  }
+
 }
